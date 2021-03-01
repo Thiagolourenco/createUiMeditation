@@ -1,14 +1,17 @@
 import React from 'react'
 import { View, Text, TextInput } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 import { ButtonIcon, ButtonSocialLogin, Button } from '../../../components'
 import { Facebook, Google } from '../../../assets/svg'
 
 export default function SignIn() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <ButtonIcon />
+      <ButtonIcon onPress={() => navigation.goBack()}/>
       <Text style={styles.title}>Welcome Back!</Text>
 
       <View style={styles.viweGroupButton}>
@@ -53,7 +56,7 @@ export default function SignIn() {
 
       <View style={styles.viewFooter}>
         <Text style={styles.footer}>ALREADY HAVE AN ACCOUNT? </Text>
-        <Text style={styles.footerSignUp}>SIGN UP</Text>
+        <Text style={styles.footerSignUp} onPress={() => navigation.navigate('SignUp')}>SIGN UP</Text>
       </View>
      
     </View>
