@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TextInput } from 'react-native'
 
 import styles from './styles'
-import { ButtonIcon, ButtonSocialLogin } from '../../../components'
+import { ButtonIcon, ButtonSocialLogin, Button } from '../../../components'
 import { Facebook, Google } from '../../../assets/svg'
 
 export default function SignIn() {
@@ -11,7 +11,7 @@ export default function SignIn() {
       <ButtonIcon />
       <Text style={styles.title}>Welcome Back!</Text>
 
-      <View>
+      <View style={styles.viweGroupButton}>
 
         <ButtonSocialLogin 
           onPress={() => {}} 
@@ -33,6 +33,29 @@ export default function SignIn() {
         />
 
       </View>
+
+      <Text style={styles.textLog}>OR LOG IN WITH EMAIL</Text>
+
+      <View style={styles.viweGroupInput}>
+        <TextInput 
+          placeholder="Email address" 
+          style={styles.input}
+        />
+        <TextInput 
+          placeholder="Password"
+          secureTextEntry 
+          style={styles.input}
+        />
+      </View>
+
+      <Button title="LOG IN" onPress={() => {}}/>
+      <Text style={styles.textForgot}>Forgot Password?</Text>
+
+      <View style={styles.viewFooter}>
+        <Text style={styles.footer}>ALREADY HAVE AN ACCOUNT? </Text>
+        <Text style={styles.footerSignUp}>SIGN UP</Text>
+      </View>
+     
     </View>
   )
 }
