@@ -64,6 +64,19 @@ const styles = StyleSheet.create({
     lineHeight: 15.13,
     textAlign: "center",
     color: "#8E97FD"
+  },
+  headerVector: {
+    position: "absolute", 
+    flexDirection:  "row", 
+    justifyContent: "space-between", 
+    width: "100%"
+  },
+  footerVector: {
+    position: "absolute", 
+    flexDirection:  "row", 
+    justifyContent: "space-between", 
+    width: "100%",
+    top: "20%"
   }
 })
 

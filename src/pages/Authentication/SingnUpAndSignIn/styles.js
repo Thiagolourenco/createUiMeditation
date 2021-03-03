@@ -55,6 +55,29 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "400",
     lineHeight: 15.13,
+  },
+  imageHeader: {
+    ...StyleSheet.absoluteFillObject, 
+    justifyContent: "center", 
+    alignItems: "center", 
+  },
+  headerTitleStyle: {
+    ...StyleSheet.absoluteFillObject, 
+    top: 50,
+    justifyContent:"center",
+    alignItems: "center",
+    height: 40,
+    flexDirection: "row",
+    alignSelf: "center",
+    // alignItems: "center"
+  },
+  textTitle: {
+    fontSize: 16,
+    color: "#3F414E",
+    fontWeight: "700",
+  },
+  imageVector: {
+    marginHorizontal: 5
   }
 })
 

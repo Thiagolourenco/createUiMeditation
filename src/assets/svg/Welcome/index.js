@@ -1,0 +1,5 @@
+export { default as WelcomeGroup } from './Group'
+export { default as WelcomeEllipse } from './Ellipse'
+export { default as WelcomeEllipse12 } from './Ellipse12'
+export { default as WelcomeEllipse11 } from './Ellipse11'
+export { default as WelcomeEllipse10 } from './Ellipse10'

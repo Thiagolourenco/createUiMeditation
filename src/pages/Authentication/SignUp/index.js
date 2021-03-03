@@ -4,7 +4,15 @@ import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 import { ButtonIcon, ButtonSocialLogin, Button, CheckInfo } from '../../../components'
-import { Facebook, Google } from '../../../assets/svg'
+import { 
+  Facebook, 
+  Google, 
+  VectorOne, 
+  VectorTwo,
+  VectorThree,
+  VectorFour,
+  IconEye
+ } from '../../../assets/svg'
 import { Feather } from '@expo/vector-icons'
 
 export default function SignUp() {
@@ -13,6 +21,16 @@ export default function SignUp() {
   return (
     <View style={styles.container}>
       <ButtonIcon onPress={() => navigation.goBack()}/>
+      <View style={styles.headerVector}>
+        <VectorOne />
+        <VectorTwo />
+      </View>
+
+      <View style={styles.footerVector}>
+        <VectorThree />
+        <VectorFour />
+      </View>
+
       <Text style={styles.title}>Create your account</Text>
 
       <View style={styles.viweGroupButton}>
@@ -64,7 +82,7 @@ export default function SignUp() {
           secureTextEntry 
           style={styles.input}
         />
-          <Feather name="check" size={18} color="#6CB28E"/> 
+         <IconEye />
         </View>
 
         

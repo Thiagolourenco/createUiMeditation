@@ -4,7 +4,14 @@ import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 import { ButtonIcon, ButtonSocialLogin, Button } from '../../../components'
-import { Facebook, Google } from '../../../assets/svg'
+import { 
+  Facebook, 
+  Google, 
+  VectorOne, 
+  VectorTwo,
+  VectorThree,
+  VectorFour
+} from '../../../assets/svg'
 
 export default function SignIn() {
   const navigation = useNavigation();
@@ -12,6 +19,17 @@ export default function SignIn() {
   return (
     <View style={styles.container}>
       <ButtonIcon onPress={() => navigation.goBack()}/>
+      <View style={styles.headerVector}>
+        <VectorOne />
+        <VectorTwo />
+      </View>
+
+      <View style={styles.footerVector}>
+        <VectorThree />
+        <VectorFour />
+      </View>
+
+
       <Text style={styles.title}>Welcome Back!</Text>
 
       <View style={styles.viweGroupButton}>
@@ -51,7 +69,7 @@ export default function SignIn() {
         />
       </View>
 
-      <Button title="LOG IN" onPress={() => {}}/>
+      <Button title="LOG IN" onPress={() => navigation.navigate('Dashboard')}/>
       <Text style={styles.textForgot}>Forgot Password?</Text>
 
       <View style={styles.viewFooter}>

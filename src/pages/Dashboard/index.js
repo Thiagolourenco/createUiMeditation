@@ -1,10 +1,18 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { createStackNavigator } from '@react-navigation/stack'
+
+import Welcome from './Welcome'
+
+const Stack = createStackNavigator();
 
 export default function Routes() {
   return (
-    <View>
-      <Text>Welcome</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen 
+        name="Welcome" 
+        component={Welcome} 
+        options={{ headerShown: false}}
+      />
+    </Stack.Navigator>
   )
 }
