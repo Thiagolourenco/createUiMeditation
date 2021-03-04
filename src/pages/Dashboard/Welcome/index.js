@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 import TitleWelcome from '../../../assets/Title.png'
@@ -16,6 +17,8 @@ import {
 import {Button} from '../../../components'
 
 export default function Welcome() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -64,7 +67,7 @@ export default function Welcome() {
         <View style={{ bottom: 60}}>
           <Button 
             title="GET STARTED" 
-            onPress={() => {}} 
+            onPress={() => navigation.navigate('ChooseTopic')} 
             backgroundColor="#EBEAEC" 
             color="#3F414E"
           />
