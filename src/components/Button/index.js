@@ -4,10 +4,10 @@ import { RectButton } from 'react-native-gesture-handler'
 
 import styles from './styles'
 
-export default function Button({ title, onPress}) {
+export default function Button({ title, onPress, backgroundColor, color}) {
   return (
     <RectButton 
-      style={styles.buttonContainer} 
+      style={[styles.buttonContainer, { backgroundColor, color}]} 
       {...{onPress}}
       >
       <Text style={styles.buttonText}>{title}</Text>

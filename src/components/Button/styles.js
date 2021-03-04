@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     height: 63,
     width: 374,
-    backgroundColor: "#8E97FD",
+    // backgroundColor: "#8E97FD",
     borderRadius: 38,
     justifyContent: "center",
     alignItems: "center",
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "400",
     lineHeight: 15.13,
-    color: "#F6F1FB"
+    // color: "#F6F1FB"
   }
 })
 

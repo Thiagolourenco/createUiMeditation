@@ -69,7 +69,12 @@ export default function SignIn() {
         />
       </View>
 
-      <Button title="LOG IN" onPress={() => navigation.navigate('Dashboard')}/>
+      <Button 
+        title="LOG IN" 
+        onPress={() => navigation.navigate('Dashboard')}
+        backgroundColor="#8E97FD" 
+        color="#F6F1FB"
+      />
       <Text style={styles.textForgot}>Forgot Password?</Text>
 
       <View style={styles.viewFooter}>

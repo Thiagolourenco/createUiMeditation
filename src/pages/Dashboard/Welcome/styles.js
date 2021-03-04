@@ -49,12 +49,34 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    top: "20%"
+    top: "40%",
   },
   ellipse12: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: "center",
     alignItems: "center"
+  },
+  rectangle: {
+    // position: "absolute", 
+    // bottom: 0, 
+    // backgroundColor: "#000", 
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: "flex-end",
+    alignItems: "center",
+    bottom: -102
+  },
+  VectorCloud: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
+    top: 150
+  },
+  VectorBird: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
+    top: 130,
+    right: 80
   }
 })
 

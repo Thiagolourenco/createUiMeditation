@@ -94,7 +94,12 @@ export default function SignUp() {
       </View>
       
 
-      <Button title="GET STARTED" onPress={() => {}}/>
+      <Button 
+        title="GET STARTED" 
+        onPress={() => {}}
+        backgroundColor="#8E97FD" 
+        color="#F6F1FB"
+      />
      
     </View>
   )

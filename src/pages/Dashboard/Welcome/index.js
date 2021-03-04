@@ -8,8 +8,12 @@ import {
   WelcomeEllipse, 
   WelcomeEllipse12, 
   WelcomeEllipse11,
-  WelcomeEllipse10
+  WelcomeEllipse10,
+  Rectangle,
+  VectorCloud,
+  VectorBird
 } from '../../../assets/svg/Welcome'
+import {Button} from '../../../components'
 
 export default function Welcome() {
   return (
@@ -31,7 +35,6 @@ export default function Welcome() {
       </View>
       
       <View style={styles.groupSvg}>
-        
           <WelcomeEllipse />
         <View style={styles.ellipse12}>
           <WelcomeEllipse12 />  
@@ -46,6 +49,27 @@ export default function Welcome() {
         <View style={styles.ellipse12}>
           <WelcomeGroup />
         </View>
+
+        <View style={styles.VectorBird}>
+          <VectorBird />
+        </View>
+        <View style={styles.VectorCloud}>
+          <VectorCloud />
+        </View>
+        
+        <View style={styles.rectangle}>
+          <Rectangle />
+        </View>
+
+        <View style={{ bottom: 60}}>
+          <Button 
+            title="GET STARTED" 
+            onPress={() => {}} 
+            backgroundColor="#EBEAEC" 
+            color="#3F414E"
+          />
+        </View>
+       
       </View>
     </View>
   )
