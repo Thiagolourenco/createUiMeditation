@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
   container: {
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
   },
   list: {
     flexGrow: 1,
+
     // alignSelf: "center"
   },
   contentText: {
@@ -36,8 +38,10 @@ const styles = StyleSheet.create({
   listView: {
     width: 176.43,
     borderRadius: 10,
-    marginTop: 20,
-    marginLeft: 20
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "#000"
+    // marginTop: 20,
+    // marginLeft: 20
   }
 })
 

@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
   buttonIconContainer: {
@@ -9,7 +10,7 @@ const styles = StyleSheet.create({
     borderColor: "#EBEAEC",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 60,
+    marginTop: scale(30),
     marginLeft: 15
   }
 })

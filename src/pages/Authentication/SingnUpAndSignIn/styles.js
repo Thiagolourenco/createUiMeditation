@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
   container: {
@@ -9,12 +10,12 @@ const styles = StyleSheet.create({
   },
   ImageContent: {
     // ...StyleSheet.absoluteFillObject,
-    height: 503,
+    height: scale(430),
     width: "100%"
   },
   Group: {
-    height: 242.69,
-    width: 332.22,
+    height: scale(212.69),
+    width: scale(312.22),
     // ...StyleSheet.absoluteFill,
     // backgroundColor: "#000"
   },

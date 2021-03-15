@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, TextInput } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 import styles from './styles'
 import { ButtonIcon, ButtonSocialLogin, Button, CheckInfo } from '../../../components'
@@ -20,87 +21,88 @@ export default function SignUp() {
 
   return (
     <View style={styles.container}>
-      <ButtonIcon onPress={() => navigation.goBack()}/>
-      <View style={styles.headerVector}>
-        <VectorOne />
-        <VectorTwo />
-      </View>
+      <KeyboardAwareScrollView style={{ flex: 1}}>
+        <ButtonIcon onPress={() => navigation.goBack()}/>
+        <View style={styles.headerVector}>
+          <VectorOne />
+          <VectorTwo />
+        </View>
 
-      <View style={styles.footerVector}>
-        <VectorThree />
-        <VectorFour />
-      </View>
+        <View style={styles.footerVector}>
+          <VectorThree />
+          <VectorFour />
+        </View>
 
-      <Text style={styles.title}>Create your account</Text>
+        <Text style={styles.title}>Create your account</Text>
 
-      <View style={styles.viweGroupButton}>
+        <View style={styles.viweGroupButton}>
 
-        <ButtonSocialLogin 
-          onPress={() => {}} 
-          title="CONTINUE WITH FACEBOOK"
-          backgroundColor="#7583CA"
-          Icon={Facebook}
-          textColor="#F6F1F8"
+          <ButtonSocialLogin 
+            onPress={() => {}} 
+            title="CONTINUE WITH FACEBOOK"
+            backgroundColor="#7583CA"
+            Icon={Facebook}
+            textColor="#F6F1F8"
 
-        />
+          />
 
-        <ButtonSocialLogin 
-          onPress={() => {}} 
-          title="CONTINUE WITH GOOGLE"
-          backgroundColor="transparent"
-          textColor="#3F414E"
-          Icon={Google}
-          borderWidth={1}
-          borderColor="#EBEAEC"
-        />
+          <ButtonSocialLogin 
+            onPress={() => {}} 
+            title="CONTINUE WITH GOOGLE"
+            backgroundColor="transparent"
+            textColor="#3F414E"
+            Icon={Google}
+            borderWidth={1}
+            borderColor="#EBEAEC"
+          />
 
-      </View>
+        </View>
 
-      <Text style={styles.textLog}>OR LOG IN WITH EMAIL</Text>
+        <Text style={styles.textLog}>OR LOG IN WITH EMAIL</Text>
 
-      <View style={styles.viweGroupInput}>
-        <View style={styles.viewInput}>
+        <View style={styles.viweGroupInput}>
+          <View style={styles.viewInput}>
+            <TextInput 
+              placeholder="users" 
+              style={styles.input}
+            />
+            <Feather name="check" size={18} color="#6CB28E"/> 
+          </View>
+
+          <View style={styles.viewInput}>
+            <TextInput 
+              placeholder="email@gmail" 
+              style={styles.input}
+            />
+            <Feather name="check" size={18} color="#6CB28E"/> 
+          </View>
+
+          
+          <View style={styles.viewInput}>
           <TextInput 
-            placeholder="users" 
+            placeholder="Password"
+            secureTextEntry 
             style={styles.input}
           />
-          <Feather name="check" size={18} color="#6CB28E"/> 
+          <IconEye />
+          </View>
+
+          
         </View>
 
-        <View style={styles.viewInput}>
-          <TextInput 
-            placeholder="email@gmail" 
-            style={styles.input}
-          />
-          <Feather name="check" size={18} color="#6CB28E"/> 
+        <View style={styles.viewPrivatePolicy}>
+          <Text style={styles.textPrivatePolicy}>i have read the <Text style={styles.privateLink}>Privace Policy</Text></Text>
+          <CheckInfo />
         </View>
-
         
-        <View style={styles.viewInput}>
-        <TextInput 
-          placeholder="Password"
-          secureTextEntry 
-          style={styles.input}
+
+        <Button 
+          title="GET STARTED" 
+          onPress={() => {}}
+          backgroundColor="#8E97FD" 
+          color="#F6F1FB"
         />
-         <IconEye />
-        </View>
-
-        
-      </View>
-
-      <View style={styles.viewPrivatePolicy}>
-        <Text style={styles.textPrivatePolicy}>i have read the <Text style={styles.privateLink}>Privace Policy</Text></Text>
-        <CheckInfo />
-      </View>
-      
-
-      <Button 
-        title="GET STARTED" 
-        onPress={() => {}}
-        backgroundColor="#8E97FD" 
-        color="#F6F1FB"
-      />
-     
+      </KeyboardAwareScrollView>
     </View>
   )
 }

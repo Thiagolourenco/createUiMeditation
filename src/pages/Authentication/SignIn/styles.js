@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
   container: {
@@ -10,10 +11,10 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     textAlign: "center",
     lineHeight: 37.8,
-    marginTop: 20
+    marginTop: scale(5)
   },
   viweGroupButton: {
-    marginTop: 30
+    marginTop: scale(15)
   },
   textLog: {
     fontSize: 14,
@@ -28,8 +29,8 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: "#F2F3F7",
-    height: 63,
-    width: 374,
+    height: scale(63),
+    width: scale(324),
     borderRadius: 15,
     fontSize: 16,
     fontWeight: "300",
@@ -46,8 +47,9 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   viewFooter: {
-    position: "absolute",
-    bottom: 50,
+    // position: "absolute",
+    // bottom: scale(10),
+    marginTop: 30,
     alignSelf: "center",
     flexDirection: "row"
   },

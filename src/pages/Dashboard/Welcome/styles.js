@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 8
   },
   content: {
-    marginTop: 50
+    marginTop: scale(20)
   },
   title: {
     fontSize: 30,
@@ -49,12 +50,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    top: "40%",
+    top: "60%",
   },
   ellipse12: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    top: scale(20)
+  },
+  ellipse13: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: "center",
+    alignItems: "center",
+    bottom: scale(150)
+    // top: scale(20)
+
   },
   rectangle: {
     // position: "absolute", 
@@ -63,20 +73,23 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     justifyContent: "flex-end",
     alignItems: "center",
-    bottom: -102
+    bottom: scale(-140)
   },
   VectorCloud: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: "flex-start",
     alignItems: "flex-end",
-    top: 150
+    top: scale(-60)
   },
   VectorBird: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: "flex-start",
     alignItems: "flex-end",
-    top: 130,
-    right: 80
+    top: scale(-90),
+    right: scale(100)
+  },
+  buttonGetStarted: {
+    bottom: 160
   }
 })
 

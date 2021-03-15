@@ -33,7 +33,12 @@ export default function SignUpAndSignIn() {
           for smalls meditation 
         </Text>
         <View style={styles.groupButton}>
-          <Button title="SIGN UP" onPress={() => navigation.navigate('SignUp')}/>
+          <Button 
+            title="SIGN UP" 
+            onPress={() => navigation.navigate('SignUp')} 
+            backgroundColor="#8E97FD"
+            color="#F6F1FB"
+          />
           <View style={styles.textView}>
             <Text style={styles.textCreate}>ALREADY HAVE AN ACCOUNT? </Text>
             <Text style={styles.textBtn} onPress={() => navigation.navigate('SignIn')}>LOG IN</Text>

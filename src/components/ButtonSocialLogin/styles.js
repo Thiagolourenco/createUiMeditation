@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    height: 63,
-    width: 374,
+    height: scale(63),
+    width: scale(324),
     borderRadius: 38,
     justifyContent: "space-evenly",
     alignItems: "center",

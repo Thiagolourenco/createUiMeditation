@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
   container: {
@@ -28,8 +29,8 @@ const styles = StyleSheet.create({
   },
   viewInput: {
     backgroundColor: "#F2F3F7",
-    height: 63,
-    width: 374,
+    height: scale(63),
+    width: scale(324),
     borderRadius: 15,
     fontSize: 16,
     fontWeight: "300",

@@ -49,7 +49,7 @@ export default function Welcome() {
           <WelcomeEllipse10 />
         </View>
 
-        <View style={styles.ellipse12}>
+        <View style={styles.ellipse13}>
           <WelcomeGroup />
         </View>
 
@@ -64,7 +64,7 @@ export default function Welcome() {
           <Rectangle />
         </View>
 
-        <View style={{ bottom: 60}}>
+        <View style={styles.buttonGetStarted}>
           <Button 
             title="GET STARTED" 
             onPress={() => navigation.navigate('ChooseTopic')} 
