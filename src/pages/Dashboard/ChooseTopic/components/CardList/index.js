@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import { RectButton } from 'react-native-gesture-handler'
 
 import styles from './styles'
 
@@ -9,21 +10,23 @@ export default function CardList({
     title, 
     svg,
     marginTop,
-    color
+    color,
+    onPress
 }) {
     return (
-        <View 
+        <RectButton 
             style={[
                 styles.container,
                 { height, 
                   backgroundColor,
                 }
             ]}
+            {...{ onPress }}
         >
             <View style={[styles.svg, {marginTop}]}>
                 {svg}
             </View>
             <Text style={[styles.title, { color }]}>{title}</Text>
-        </View>
+        </RectButton>
     )
 }

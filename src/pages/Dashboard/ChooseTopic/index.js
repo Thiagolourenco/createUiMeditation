@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, FlatList } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 import { CardList } from './components'
@@ -16,6 +17,8 @@ import {
 } from '../../../assets/svg/ChooseTopic'
 
 export default function ChooseTopic() {
+  const navigation = useNavigation();
+
   const data = [
     {
       id: 1,
@@ -24,7 +27,8 @@ export default function ChooseTopic() {
       backgroundColor: "#9BA3FF",
       svg: <ReduceStress />,
       top: 0,
-      color: "#FFECCC"
+      color: "#FFECCC",
+      navigation: 'Reminders'
     },
     {
       id: 2,
@@ -33,7 +37,8 @@ export default function ChooseTopic() {
       backgroundColor: "#FA6E5A",
       svg: <ImprovePerfomance />,
       top: 10,
-      color: "#FEF9F3"
+      color: "#FEF9F3",
+      navigation: ''
     },
     {
       id: 3,
@@ -42,7 +47,8 @@ export default function ChooseTopic() {
       backgroundColor: "#FEB18F",
       svg: <IncreaseHappiness />,
       top: 0,
-      color: "#3F414E"
+      color: "#3F414E",
+      navigation: ''
     },
     {
       id: 4,
@@ -51,7 +57,8 @@ export default function ChooseTopic() {
       backgroundColor: "#FFCF86",
       svg: <ReduceAnxiety />,
       top: 10,
-      color: "#3F414E"
+      color: "#3F414E",
+      navigation: ''
     },
     {
       id: 5,
@@ -60,7 +67,8 @@ export default function ChooseTopic() {
       backgroundColor: "#6CB28E",
       svg: <PersonalGrowth />,
       top: 0,
-      color: "#FFECCC"
+      color: "#FFECCC",
+      navigation: ''
     },
     {
       id: 6,
@@ -69,7 +77,8 @@ export default function ChooseTopic() {
       backgroundColor: "#3F414E",
       svg: <BetterSleep />,
       top: 10,
-      color: "#EBEAEC"
+      color: "#EBEAEC",
+      navigation: 'WelcomeSleep'
     },
     {
       id: 7,
@@ -78,7 +87,8 @@ export default function ChooseTopic() {
       backgroundColor: "#8E97FD",
       svg: <ReduceStress />,
       top: 0,
-      color: "#FFECCC"
+      color: "#FFECCC",
+      navigation: ''
 
     },
     {
@@ -88,7 +98,8 @@ export default function ChooseTopic() {
       backgroundColor: "#D9A5B5",
       svg: <GroupTwo />,
       top: -10,
-      color: "#FFECCC"
+      color: "#FFECCC",
+      navigation: ''
 
     },
   ]
@@ -120,6 +131,7 @@ export default function ChooseTopic() {
                   svg={card.svg}
                   marginTop={card.top}
                   color={card.color}
+                  onPress={() => navigation.navigate(card.navigation)}
                 />
               ))}
 
@@ -137,6 +149,7 @@ export default function ChooseTopic() {
                   svg={card.svg}
                   marginTop={card.top}
                   color={card.color}
+                  onPress={() => navigation.navigate(card.navigation)}
                 />
               ))} 
           </View>
