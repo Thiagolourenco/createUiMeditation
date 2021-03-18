@@ -1,0 +1,7 @@
+export { default as Basics } from './Basics'
+export { default as Relaxation } from './Relaxation'
+export { default as VectorOne } from './VectorOne'
+export { default as VectorTwo } from './VectorTwo'
+export { default as VectorThree } from './VectorThree' 
+export { default as Focus } from './Focus'
+export { default as Happiness } from './Happiness'
