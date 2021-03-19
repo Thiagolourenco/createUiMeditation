@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Welcome from './Welcome'
 import ChooseTopic from './ChooseTopic'
-import {Reminders, Home} from './ReduceStress'
+import {Reminders, Home, CourseDetails} from './ReduceStress'
 import {WelcomeSleep} from './BetterSleep'
 
 const Stack = createStackNavigator();
@@ -39,6 +39,11 @@ export default function Routes() {
         options={{ headerShown: false}}
       />
 
+      <Stack.Screen 
+        name="CourseDetails"
+        component={CourseDetails}
+        options={{ headerShown: false}}
+      />
     </Stack.Navigator>
   )
 }

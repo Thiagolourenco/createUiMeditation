@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, Image, FlatList } from 'react-native' 
 import { Entypo } from '@expo/vector-icons';
 import { RectButton, ScrollView} from 'react-native-gesture-handler'
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 import Title from '../../../../assets/Title.png'
@@ -16,6 +17,8 @@ import {
 } from '../../../../assets/svg/Home'
 
 export default function Home() {
+    const navigation = useNavigation();
+
     const data = [
         {
             id: 1,
@@ -74,7 +77,10 @@ export default function Home() {
                             
                             <View style={styles.footerBtn}>
                                 <Text style={styles.textMin}>3 - 10 MIN</Text>
-                                <RectButton style={styles.btnStart}>
+                                <RectButton 
+                                    style={styles.btnStart}
+                                    onPress={() => navigation.navigate('CourseDetails')}
+                                >
                                     <Text>Start</Text>
                                 </RectButton>
                             </View>
@@ -90,7 +96,10 @@ export default function Home() {
                             
                             <View style={styles.footerRelaxtionBtn}>
                                 <Text style={[styles.textMin, { color: "#524F53" }]}>3 - 10 MIN</Text>
-                                <RectButton style={[styles.btnStart, { backgroundColor: "#3F414E"}]}>
+                                <RectButton 
+                                    style={[styles.btnStart, { backgroundColor: "#3F414E"}]}
+                                    onPress={() => navigation.navigate('CourseDetails')}
+                                >
                                     <Text style={[styles.btnStartText, { color: "#FEFFFE"}]}>Start</Text>
                                 </RectButton>
                             </View>
@@ -122,7 +131,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.footerView}>
-                    <Text style={styles.footerTitle}>Recomended for you</Text>
+                    <Text style={styles.footerTitle}>Recommended for you</Text>
 
                     <FlatList 
                         data={data}
