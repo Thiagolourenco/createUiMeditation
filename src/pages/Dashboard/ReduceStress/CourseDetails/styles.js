@@ -78,15 +78,24 @@ const styles = StyleSheet.create({
     },
     viewHeader: {
         flexDirection: "row",
-        marginTop: 10
+        marginTop: 20,
+        borderBottomWidth: 1,
+        borderBottomColor: "#E4E6FD",
+        width: "100%",
+        
         // justifyContent: "space-evenly",
     },
     btnActiveMale: {
-        height: 40,
+        // height: 40,
         width: 150,
         backgroundColor: "#eee",
         justifyContent: "center",
         alignItems: "center",
+    },
+    btnActiveMaleText: {
+        fontSize: 16,
+        fontWeight: "400",
+        lineHeight: 17.3
     },
     viewBorder: {
         // height: 40,

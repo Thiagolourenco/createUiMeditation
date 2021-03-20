@@ -2,7 +2,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from './Home'
-import Meditate from './Home'
+import Meditate from './Meditate'
 
 import { BottomTabCustom } from '../../../components'
 

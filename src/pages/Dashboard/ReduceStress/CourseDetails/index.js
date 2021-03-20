@@ -90,12 +90,24 @@ export default function CourseDetails() {
                     <Text style={styles.titleContent}>Pick a Nnrrator</Text>
 
                     <View style={styles.viewHeader}>
-                        <TouchableOpacity style={styles.btnActiveMale}>
-                            <Text>MALE VOICE</Text>
+                        <TouchableOpacity 
+                            style={styles.btnActiveMale}
+                            activeOpacity={0.8}
+                        >
+                            <Text style={[styles.btnActiveMaleText, { color: "#8E97FD"}]}>MALE VOICE</Text>
                             <View style={styles.viewBorder} />
                         </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text>FEMALE VOICE</Text>
+                        <TouchableOpacity 
+                            style={[styles.btnActiveMale, { marginBottom: 10}]}
+                            activeOpacity={0.8}
+                        >
+                            <Text 
+                                style={[
+                                    styles.btnActiveMaleText, 
+                                    { color: "#A1A4B2"}
+                                ]}>
+                                FEMALE VOICE
+                            </Text>
                         </TouchableOpacity>
                 
                     </View>
