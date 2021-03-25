@@ -119,7 +119,8 @@ export default function CourseDetails() {
                             <TouchableOpacity 
                                 style={styles.viewPlaying} 
                                 key={index}
-                                activeOpacity={0.8}    
+                                activeOpacity={0.8}  
+                                onPress={() => navigation.navigate("MusicV2")}  
                             >
                                 <View style={[
                                     styles.button,
