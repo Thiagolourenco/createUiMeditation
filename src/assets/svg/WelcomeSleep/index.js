@@ -1,0 +1,6 @@
+export { default as Sleep } from './WelcomeSleep'
+export { default as Stars } from './Stars'
+export { default as StarsTwo } from './StarsTwo'
+export { default as Moon } from './Moon'
+export { default as Eclipse } from './Eclipse'
+export { default as Bird } from './Bird'
